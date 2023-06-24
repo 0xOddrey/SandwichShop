@@ -2,15 +2,14 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
  
 export default function Page() {
-  const [tokenId, setTokenId] = useState("")
 
-  const router = useRouter();
+  const [tokenId, setTokenId] = useState(1)
+
   useEffect(() => {
-      if (router.isReady) {
-        console.log(router.query);
-        setTokenId(router.query.tokenId as string)
-      }
-    }, [router.isReady, router.query]);
+    if (global.window.location.href) {
+      console.log(global.window.location.href)
+    }
+    }, []);
 
   if (!tokenId) return <div>Loading...</div>
   return (
