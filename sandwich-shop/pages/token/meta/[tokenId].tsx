@@ -10,5 +10,10 @@ export default function Page() {
     setTokenId(token as string)
   }, [router.query.tokenId])
 
-  return <p>Token: {tokenId}</p>
+  return (
+      <>
+        <h1>This is the token</h1>
+        <p>Token: {tokenId}</p>
+      </>
+    )
 }
