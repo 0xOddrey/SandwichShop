@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />}>
         </Route>
-        <Route path="/token/meta" element={<Token />}>
+        <Route path="/token/meta/:tokenId" element={<Token />}>
         </Route>
       </Routes>
     </>
