@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import { SmartWallet } from "@thirdweb-dev/wallets";
+import { NFT } from "@thirdweb-dev/react";
 import {
   TWAPI_KEY,
   factoryAddress,
