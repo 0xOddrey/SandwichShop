@@ -1,7 +1,7 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
 import "./styles/Home.css";
 import { Routes, Route, Outlet, Link } from "react-router-dom";
-import Homepage from "./components/Homepage"
+import Homepage from "./components/Homepage/Homepage"
 import Token from "./components/Token"
 
 
