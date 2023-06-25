@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import { ThirdwebNftMedia } from "@thirdweb-dev/react";
 import { NFT } from "@thirdweb-dev/sdk"
-
+import Image from 'next/image'
 
 type Props = {
     nft: NFT
@@ -8,11 +9,10 @@ type Props = {
 
 export default function NFTComponent({ nft }: Props) {
 
+    console.log(nft.metadata.image)
     return (
         <>
-        <ThirdwebNftMedia
-        metadata={nft.metadata}
-        />
+        <img src={`${nft.metadata.image}`} alt="nft" />
         <h1>{nft.metadata.name}</h1>
         <p>{nft.metadata.description}</p>
         </>

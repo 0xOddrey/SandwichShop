@@ -29,6 +29,7 @@ const Home: NextPage = () => {
           <NFTGrid 
             isLoading={isLoading}
             nfts={data}
+            emptyText="No NFTs found"
           />
           
           <Web3Button
