@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react'
  
 export default function Page() {
 
-  const [tokenId, setTokenId] = useState(1)
+  const [tokenId, setTokenId] = useState("")
 
   useEffect(() => {
     if (global.window.location.href) {
-      console.log(global.window.location.href)
+      setTokenId(global.window.location.href)
     }
     }, []);
 
