@@ -1,21 +1,32 @@
-import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import { ConnectWallet, Web3Button, useAddress, useOwnedNFTs, useContract } from "@thirdweb-dev/react";
+import type { NextPage } from "next";
+import styles from "../styles/Home.module.css";
+
  
 export default function Page() {
+  const address = useAddress();
 
-  const [tokenId, setTokenId] = useState("")
+  const {
+    contract 
+  } = useContract('0x05D55A89De2680b194db09be1e6A7C30ee144193');
 
-  useEffect(() => {
-    if (global.window.location.href) {
-      setTokenId(global.window.location.href)
-    }
-    }, []);
+  const {
+    data,
+    isLoading 
+  } = useOwnedNFTs(contract, address)
 
-  if (!tokenId) return <div>Loading...</div>
+  if (!data || isLoading) {
+    return (
+      <>
+        <h1>Loading...</h1>
+      </>
+    )
+  }
+  console.log(data[0])
   return (
       <>
         <h1>This is the token</h1>
-        <p>Token: {tokenId}</p>
+        <p>Token:  {data[0].owner} </p>
       </>
     )
 }
