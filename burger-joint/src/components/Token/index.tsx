@@ -9,5 +9,5 @@ export default function Token() {
            <h1>Token {params.tokenId}</h1>
         </div>
     )
-
+ 
 }
