@@ -15,11 +15,6 @@ export default function Home() {
           <Route path="/token/meta/:tokenId" element={<Token />}>
           </Route>
       </Routes>
-      <div className="container">
-        <main className="main">
-
-        </main>
-      </div>
     </>
   );
 }
