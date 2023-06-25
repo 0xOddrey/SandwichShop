@@ -12,6 +12,8 @@ export default function Home() {
       <Routes>
           <Route path="/" element={<Homepage />}>
           </Route>
+          <Route path="/token" element={<Token />}>
+          </Route>
           <Route path="/token/meta/:tokenId" element={<Token />}>
           </Route>
       </Routes>
