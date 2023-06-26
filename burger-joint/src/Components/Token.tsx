@@ -71,7 +71,7 @@ export default function Token() {
 
 return (
     <>
-    <h1 className="text-3xl mx-4 my-4">Order {tokenId}</h1>
+    <h1 className="text-3xl mx-4 my-4">Order {tokenId + 1}</h1>
     {completed ? (
          <div className="bg-green-500 text-black px-11 py-11">
          <p>Completed: TRUE</p>
