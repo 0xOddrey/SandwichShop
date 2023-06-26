@@ -40,6 +40,7 @@ export default function Token({ nft }: Props) {
     }, [nft, smartWalletAddress, address, wallet])
     return (
         <>
+        <div className="flex flex-col items-center justify-center">
             {nft && (
                 <>
                 <h1>{nft.metadata.name}</h1>
@@ -54,6 +55,7 @@ export default function Token({ nft }: Props) {
                 : (
                     <p>Loading...</p>
                 )}
+        </div>
         </>
     )
 }
