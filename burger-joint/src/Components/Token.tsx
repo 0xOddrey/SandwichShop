@@ -71,14 +71,24 @@ export default function Token() {
 
 return (
     <>
-    <h1>Token 11 {tokenId}</h1>
-    <p>Completed: {completed ? 'true' : 'false'}</p>
+    <h1 className="text-3xl mx-4 my-4">Order {tokenId}</h1>
+    {completed ? (
+         <div className="bg-green-500 text-black px-11 py-11">
+         <p>Completed: TRUE</p>
+     </div>
+        ) 
+    : (
+        <div className="bg-white bg-red-200 text-black px-11 py-11">
+        <p>Completed: FALSE</p>
+        </div>
+        )}
+ 
     <div>
         {nftList && nftList.length > 0 
         ? (
             nftList.map((nft) => {
                 return (
-                    <div key={nft.tokenId}>
+                    <div className="mx-11 mt-4 py-2 px-11 bg-gray-800" key={nft.tokenId}>
                         <p>{nft.title}</p>
                         <p>QTY: {nft.balance}</p>
                     </div>
